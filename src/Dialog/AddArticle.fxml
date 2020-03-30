@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="594.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DialogController.AddArticleController">
+   <children>
+      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="10.0" layoutY="12.0" prefHeight="35.0" prefWidth="32.0" style="-fx-background-color: #fff;" text=" " textFill="#0747a6">
+         <font>
+            <Font size="9.0" />
+         </font>
+         <graphic>
+            <MaterialIconView fill="#48477b" glyphName="ACCOUNT_BALANCE_WALLET" size="27" />
+         </graphic>
+      </JFXButton>
+      <Text fx:id="title" fill="#6f6f6f" layoutX="59.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nouveau Article" wrappingWidth="274.0000069141388">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#5b5454" layoutX="47.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Le nom de l'article est unique dans le system , le type et la catagorie regroupe en mieux les article en vue de bien les ranger, le prix se definie dans l'interface de la comptabilité" wrappingWidth="293.9999953955412" />
+      <JFXButton fx:id="btn_delete" buttonType="RAISED" layoutX="223.0" layoutY="516.0" onAction="#supprimer" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #fff;" text="Supprimer" textFill="#48477b">
+         <graphic>
+            <FontAwesomeIconView fill="#48477b" glyphName="TRASH" size="15" />
+         </graphic>
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="30.0" layoutY="192.0" prefHeight="49.0" prefWidth="324.0">
+         <children>
+            <Label layoutX="3.0" text="Catégorie" textFill="#42526e">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="txtCategorie" layoutX="2.0" layoutY="22.0" prefHeight="28.0" prefWidth="274.0" promptText="Sélectionner ici le type de l'article" style="-fx-border-color: #b6b6b6; -fx-border-width: 0.25px; -fx-background-color: #fff;" />
+            <JFXButton fx:id="btn_AddCAteg" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="291.0" layoutY="23.0" onAction="#AddCategorie" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #fff;" text=" " textFill="#48477b">
+               <font>
+                  <Font name="Century Gothic" size="9.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView glyphName="PLUS" size="15" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="30.0" layoutY="67.0" prefHeight="49.0" prefWidth="324.0">
+         <children>
+            <Label layoutX="3.0" text="Designation de l'article" textFill="#42526e">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutY="19.0" prefHeight="30.0" prefWidth="317.0" style="-fx-border-color: #b6b6b6; -fx-border-width: 0.25px;">
+               <children>
+                  <TextField fx:id="txtDesignation" layoutX="1.0" layoutY="1.0" prefHeight="28.0" prefWidth="317.0" promptText="Saisie ici le nom de l'article" style="-fx-background-color: #fff;" AnchorPane.leftAnchor="1.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="30.0" layoutY="126.0" prefHeight="49.0" prefWidth="324.0">
+         <children>
+            <Label layoutX="3.0" text="Type de l'article" textFill="#42526e">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="txtType" layoutX="2.0" layoutY="22.0" onAction="#chargerCateg" prefHeight="28.0" prefWidth="274.0" promptText="Sélectionner ici le type de l'article" style="-fx-border-color: #b6b6b6; -fx-border-width: 0.25px; -fx-background-color: #fff;" />
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="290.0" layoutY="23.0" onAction="#AddType" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #fff;" text=" " textFill="#48477b">
+               <font>
+                  <Font name="Century Gothic" size="9.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView glyphName="PLUS" size="15" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="30.0" layoutY="257.0" prefHeight="49.0" prefWidth="133.0">
+         <children>
+            <Label layoutX="3.0" text="Quantité" textFill="#42526e">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutY="19.0" prefHeight="30.0" prefWidth="133.0" style="-fx-border-color: #b6b6b6; -fx-border-width: 0.25px;">
+               <children>
+                  <TextField fx:id="txtQuantite" editable="false" layoutX="1.0" layoutY="1.0" prefHeight="28.0" prefWidth="133.0" promptText="10 pieces" style="-fx-background-color: #fff;" AnchorPane.leftAnchor="1.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="212.0" layoutY="257.0" prefHeight="49.0" prefWidth="133.0">
+         <children>
+            <Label layoutX="3.0" text="Quantité Minimum" textFill="#42526e">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutY="19.0" prefHeight="30.0" prefWidth="133.0" style="-fx-border-color: #b6b6b6; -fx-border-width: 0.25px;">
+               <children>
+                  <TextField fx:id="txtQteMin" layoutX="1.0" layoutY="1.0" prefHeight="28.0" prefWidth="133.0" promptText="5 pieces" style="-fx-background-color: #fff;" AnchorPane.leftAnchor="1.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="30.0" layoutY="379.0" prefHeight="49.0" prefWidth="324.0">
+         <children>
+            <Label layoutX="3.0" text="Image" textFill="#42526e">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutY="19.0" prefHeight="30.0" prefWidth="317.0" style="-fx-border-color: #b6b6b6; -fx-border-width: 0.25px;">
+               <children>
+                  <TextField fx:id="txtChemainImage" layoutX="33.25" layoutY="1.0" prefHeight="28.0" prefWidth="285.0" promptText="Chemain d'eccè de l'image" style="-fx-background-color: #fff;" AnchorPane.leftAnchor="33.0" />
+                  <MaterialIconView fill="#48477b" glyphName="PERM_MEDIA" layoutX="5.0" layoutY="25.0" size="20">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MaterialIconView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btAdd1" buttonType="RAISED" layoutX="92.0" layoutY="516.0" onAction="#Save" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #fff;" text="Enregistrer" textFill="#48477b">
+         <graphic>
+            <FontAwesomeIconView fill="#48477b" glyphName="FLOPPY_ALT" size="15" />
+         </graphic>
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="81.0" layoutY="543.0" prefHeight="49.0" prefWidth="244.0">
+         <children>
+            <FontAwesomeIconView fx:id="font" fill="RED" glyphName="EXCLAMATION_TRIANGLE" layoutX="5.0" layoutY="30.0" size="35" visible="false" wrappingWidth="34.0" />
+            <Label fx:id="labInfos" layoutX="70.0" prefHeight="49.0" prefWidth="177.0" text="Votre Psedo ou nom d'utilisateur et incorrete !" textFill="#ff2600" visible="false" wrapText="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="30.0" layoutY="318.0" prefHeight="49.0" prefWidth="317.0">
+         <children>
+            <Label layoutX="3.0" text="Unité de mésure" textFill="#42526e">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutY="19.0" prefHeight="30.0" prefWidth="317.0" style="-fx-border-color: #b6b6b6; -fx-border-width: 0.25px;" />
+            <ComboBox fx:id="txtMesure" layoutY="19.0" prefHeight="30.0" prefWidth="317.0" promptText="Sélectionner ici l'unité de mesure de l'article" style="-fx-border-color: #b6b6b6; -fx-border-width: 0.25px; -fx-background-color: #fff;" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

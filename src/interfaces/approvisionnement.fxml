@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="560.0" prefWidth="769.0" style="-fx-background-color: #F1F4F9;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfacesControllers.approvisionnementController">
+   <children>
+      <AnchorPane layoutX="265.0" layoutY="7.0" prefHeight="548.0" prefWidth="498.0" style="-fx-background-color: fff; -fx-background-radius: 5px;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="265.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="7.0">
+         <children>
+            <Text fill="#00000086" layoutX="6.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Approvisionnement N° " wrappingWidth="132.00000156462193">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtCodeApprov" fill="#6f6f6f" layoutX="139.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0002" wrappingWidth="70.0000069141388">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="12.0" layoutY="45.0" prefHeight="49.0" prefWidth="324.0">
+               <children>
+                  <Label layoutX="3.0" text="Nom du fournisseur" textFill="#42526e">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutY="19.0" prefHeight="30.0" prefWidth="322.0" style="-fx-border-color: #b6b6b6; -fx-border-width: 0.25px;">
+                     <children>
+                        <AnchorPane fx:id="panFournnssr" layoutX="39.0" layoutY="-70.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="12.0" layoutY="104.0" prefHeight="80.0" prefWidth="324.0">
+               <children>
+                  <Label layoutX="3.0" text="Observation" textFill="#42526e">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutY="19.0" prefHeight="61.0" prefWidth="324.0" style="-fx-border-color: #b6b6b6; -fx-border-width: 0.25px;">
+                     <children>
+                        <TextArea fx:id="txtObserv" layoutY="-3.0" prefHeight="61.0" prefWidth="200.0" promptText="Saisie ici une observation sur votre Approvisionnment" style="-fx-background-color: white; -fx-border-color: white;" text="Aucune" wrapText="true" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <ScrollPane layoutX="23.0" layoutY="233.0" prefHeight="315.0" prefWidth="498.0" style="-fx-background-color: white;" stylesheets="@../style/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="233.0">
+               <content>
+                  <VBox fx:id="vbApprov" prefHeight="309.0" prefWidth="493.0" spacing="3.0" style="-fx-background-color: white;" />
+               </content>
+            </ScrollPane>
+            <AnchorPane layoutX="60.0" layoutY="187.0" prefHeight="49.0" prefWidth="244.0">
+               <children>
+                  <FontAwesomeIconView fx:id="font" fill="RED" glyphName="EXCLAMATION_TRIANGLE" layoutX="5.0" layoutY="30.0" size="35" visible="false" wrappingWidth="34.0" AnchorPane.bottomAnchor="7.0" AnchorPane.topAnchor="7.0" />
+                  <Label fx:id="labInfos" layoutX="53.0" prefHeight="49.0" prefWidth="194.0" text="Votre Psedo ou nom d'utilisateur et incorrete !" textFill="#ff2600" visible="false" wrapText="true" />
+               </children>
+            </AnchorPane>
+            <DatePicker fx:id="txtDate" layoutX="319.0" layoutY="10.0" onAction="#AfficherApprovisionnement" prefHeight="25.0" prefWidth="168.0" promptText="Date d'Approvisionement" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="10.0" />
+            <VBox alignment="CENTER" layoutX="378.0" layoutY="44.0" prefHeight="185.0" prefWidth="111.0" spacing="15.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="44.0">
+               <children>
+                  <JFXButton fx:id="btnPrint" alignment="CENTER" buttonType="RAISED" onAction="#imprimer" prefHeight="25.0" prefWidth="104.0" style="-fx-background-color: #fff;" text="Imprimer" textFill="#48477b">
+                     <font>
+                        <Font name="Century Gothic" size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="PRINT" size="15" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#NouveauArticle" prefHeight="25.0" prefWidth="104.0" style="-fx-background-color: #fff;" text="Fournisseur" textFill="#48477b">
+                     <font>
+                        <Font name="Century Gothic" size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="PLUS" size="15" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_save" alignment="CENTER" buttonType="RAISED" onAction="#save" prefHeight="25.0" prefWidth="104.0" style="-fx-background-color: #fff;" text="Enregistrer" textFill="#48477b">
+                     <font>
+                        <Font name="Century Gothic" size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="FLOPPY_ALT" size="15" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_delete" alignment="CENTER" buttonType="RAISED" onAction="#delete" prefHeight="25.0" prefWidth="104.0" style="-fx-background-color: #fff;" text="Initialiser" textFill="#48477b">
+                     <font>
+                        <Font name="Century Gothic" size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="TRASH" size="15" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+         <effect>
+            <DropShadow color="#f2f2f2" />
+         </effect>
+      </AnchorPane>
+      <ScrollPane layoutX="12.0" layoutY="38.0" prefHeight="521.0" prefWidth="248.0" style="-fx-background-color: wite;" styleClass="scroll-pane2" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="38.0">
+         <content>
+            <VBox fx:id="vbx" prefHeight="520.0" prefWidth="230.0" spacing="5.0" style="-fx-background-color: #F1F4F9;" />
+         </content>
+      </ScrollPane>
+      <AnchorPane layoutX="109.0" layoutY="7.0" prefHeight="27.0" prefWidth="230.0" style="-fx-background-color: #fff; -fx-border-color: #BAC3E2; -fx-border-width: 0.25; -fx-border-radius: 7px; -fx-background-radius: 7px;" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="7.0">
+         <children>
+            <TextField fx:id="txtRechercher" layoutY="2.0" onKeyReleased="#rechercher" prefHeight="25.0" prefWidth="194.0" promptText="Rechercher un Produit" style="-fx-background-color: #FFF;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="1.0">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </TextField>
+            <OctIconView fill="#070707" glyphName="SEARCH" layoutX="206.0" layoutY="19.0" size="13" />
+         </children>
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../Style/Style.css" />
+      <URL value="@../style/style.css" />
+   </stylesheets>
+</AnchorPane>

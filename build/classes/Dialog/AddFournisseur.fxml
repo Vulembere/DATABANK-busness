@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="488.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DialogController.AddFournisseurController">
+   <children>
+      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="10.0" layoutY="12.0" prefHeight="35.0" prefWidth="32.0" style="-fx-background-color: #fff;" text=" " textFill="#0747a6">
+         <font>
+            <Font size="9.0" />
+         </font>
+         <graphic>
+            <MaterialIconView fill="#48477b" glyphName="ACCOUNT_BALANCE_WALLET" size="27" />
+         </graphic>
+      </JFXButton>
+      <Text fx:id="title" fill="#6f6f6f" layoutX="59.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nouveau Fournisseur" wrappingWidth="274.0000069141388">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#5b5454" layoutX="41.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L'identification du fournisseur est important pour designer les personnes ou organisation qui vous approvisionne , et les contacter en case de necessité." wrappingWidth="293.9999953955412" />
+      <JFXButton fx:id="btn_delete" buttonType="RAISED" layoutX="203.0" layoutY="395.0" onAction="#supprimer" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #fff;" text="Supprimer" textFill="#48477b">
+         <graphic>
+            <FontAwesomeIconView fill="#48477b" glyphName="TRASH" size="15" />
+         </graphic>
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="30.0" layoutY="67.0" prefHeight="49.0" prefWidth="324.0">
+         <children>
+            <Label layoutX="3.0" text="Nom du fournisseur" textFill="#42526e">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutY="19.0" prefHeight="30.0" prefWidth="317.0" style="-fx-border-color: #b6b6b6; -fx-border-width: 0.25px;">
+               <children>
+                  <TextField fx:id="txtNom" layoutX="1.0" layoutY="1.0" prefHeight="28.0" prefWidth="317.0" promptText="Saisie ici le nom du fournisseur" style="-fx-background-color: #fff;" AnchorPane.leftAnchor="1.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="30.0" layoutY="126.0" prefHeight="49.0" prefWidth="317.0">
+         <children>
+            <Label layoutX="3.0" text="Numéro de Télephone" textFill="#42526e">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutY="19.0" prefHeight="30.0" prefWidth="133.0" style="-fx-border-color: #b6b6b6; -fx-border-width: 0.25px;">
+               <children>
+                  <TextField fx:id="txtNumero" layoutX="1.0" layoutY="1.0" prefHeight="28.0" prefWidth="317.0" promptText="+243 000 000 000" style="-fx-background-color: #fff;" AnchorPane.leftAnchor="1.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="30.0" layoutY="186.0" prefHeight="49.0" prefWidth="317.0">
+         <children>
+            <Label layoutX="3.0" text="Adresse mail" textFill="#42526e">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutY="19.0" prefHeight="30.0" prefWidth="133.0" style="-fx-border-color: #b6b6b6; -fx-border-width: 0.25px;">
+               <children>
+                  <TextField fx:id="txtEmail" layoutX="1.0" layoutY="1.0" prefHeight="28.0" prefWidth="317.0" promptText="monemail@gmail.com" style="-fx-background-color: #fff;" AnchorPane.leftAnchor="1.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btAdd1" buttonType="RAISED" layoutX="72.0" layoutY="395.0" onAction="#Save" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #fff;" text="Enregistrer" textFill="#48477b">
+         <graphic>
+            <FontAwesomeIconView fill="#48477b" glyphName="FLOPPY_ALT" size="15" />
+         </graphic>
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="65.0" layoutY="433.0" prefHeight="49.0" prefWidth="244.0">
+         <children>
+            <FontAwesomeIconView fx:id="font" fill="RED" glyphName="EXCLAMATION_TRIANGLE" layoutX="5.0" layoutY="30.0" size="35" visible="false" wrappingWidth="34.0" />
+            <Label fx:id="labInfos" layoutX="70.0" prefHeight="49.0" prefWidth="177.0" text="Votre Psedo ou nom d'utilisateur et incorrete !" textFill="#ff2600" visible="false" wrapText="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="29.0" layoutY="248.0" prefHeight="49.0" prefWidth="317.0">
+         <children>
+            <Label layoutX="3.0" text="Adresse physique" textFill="#42526e">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutY="19.0" prefHeight="30.0" prefWidth="133.0" style="-fx-border-color: #b6b6b6; -fx-border-width: 0.25px;">
+               <children>
+                  <TextField fx:id="txtAdresse" layoutX="1.0" layoutY="1.0" prefHeight="28.0" prefWidth="317.0" promptText="Pay, Ville, Av, Numéro" style="-fx-background-color: #fff;" AnchorPane.leftAnchor="1.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

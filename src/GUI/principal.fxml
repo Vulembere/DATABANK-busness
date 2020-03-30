@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.icons525.Icons525View?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="stck" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" prefWidth="1209.0" stylesheets="@../Style/Style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIControllers.PrincipalController">
+   <children>
+      <AnchorPane prefHeight="597.0" prefWidth="835.0" style="-fx-background-color: #F6F7F9;">
+         <children>
+            <AnchorPane layoutX="34.0" layoutY="62.0" prefHeight="655.0" prefWidth="187.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane layoutX="10.0" layoutY="106.0" prefHeight="328.0" prefWidth="167.0" style="-fx-background-color: #F6F7F9;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="106.0">
+                     <children>
+                        <GridPane layoutX="4.0" layoutY="32.0" prefHeight="256.0" prefWidth="163.0" vgap="20.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <AnchorPane fx:id="pan1" prefHeight="27.0" prefWidth="209.0">
+                                 <children>
+                                    <Label fx:id="b_dash" layoutX="18.0" layoutY="4.0" onMouseClicked="#Calldash" prefHeight="20.0" prefWidth="143.0" text="Tableau de Bord" textFill="#8b8f98" AnchorPane.leftAnchor="16.0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#727272" glyphName="TACHOMETER" size="18" />
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="pan2" prefHeight="27.0" prefWidth="209.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label fx:id="b_stock" layoutX="17.0" layoutY="3.0" onMouseClicked="#CallStock" prefHeight="20.0" prefWidth="143.0" text="Stock" textFill="#8b8f98" AnchorPane.leftAnchor="16.0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <Icons525View fill="#727272" glyphName="ASTERISK" size="17" />
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="pan3" prefHeight="27.0" prefWidth="209.0" GridPane.rowIndex="5">
+                                 <children>
+                                    <Label fx:id="b_rapport" layoutX="13.0" layoutY="3.0" onMouseClicked="#Callrapport" prefHeight="20.0" prefWidth="143.0" text="Rapports" textFill="#8b8f98" AnchorPane.leftAnchor="13.0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <MaterialDesignIconView fill="#727272" glyphName="FILE_DOCUMENT_BOX" size="21" />
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="pan4" prefHeight="27.0" prefWidth="209.0" GridPane.rowIndex="6">
+                                 <children>
+                                    <Label fx:id="b_parametre" layoutX="17.0" layoutY="3.0" onMouseClicked="#CallParametre" prefHeight="20.0" prefWidth="143.0" text="Paramétres" textFill="#8b8f98" AnchorPane.leftAnchor="16.0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#727272" glyphName="STEAM_SQUARE" size="19" />
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="pan21" prefHeight="27.0" prefWidth="209.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label fx:id="b_Caisse" layoutX="17.0" layoutY="3.0" onMouseClicked="#CallCaisse" prefHeight="20.0" prefWidth="143.0" text="Caisse" textFill="#8b8f98" AnchorPane.leftAnchor="16.0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <Icons525View fill="#727272" glyphName="VINE" size="17" />
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="pan211" prefHeight="27.0" prefWidth="209.0" GridPane.rowIndex="3">
+                                 <children>
+                                    <Label fx:id="b_Comptabilite" layoutX="17.0" layoutY="3.0" onMouseClicked="#CallComptabilite" prefHeight="20.0" prefWidth="143.0" text="Comptabilité" textFill="#8b8f98" AnchorPane.leftAnchor="16.0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <Icons525View fill="#727272" glyphName="BLUETOOTH" size="17" />
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="pan32" prefHeight="27.0" prefWidth="209.0" GridPane.rowIndex="4">
+                                 <children>
+                                    <Label fx:id="b_personnelle" layoutX="13.0" layoutY="3.0" onMouseClicked="#CallPersonnelle" prefHeight="20.0" prefWidth="143.0" text="Personelle" textFill="#8b8f98" AnchorPane.leftAnchor="13.0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <Icons525View fill="#727272" glyphName="YAHOO" size="17" />
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="510.0" prefHeight="125.0" prefWidth="167.0" style="-fx-background-color: #F6F7F9;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                     <children>
+                        <MaterialDesignIconView fill="#1493d7" glyphName="ACCOUNT_BOX" layoutX="12.0" layoutY="62.0" size="48" />
+                        <Text fx:id="txUserName" layoutX="20.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maurice.B" wrappingWidth="143.00000503659248">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txtFonctionuser" fill="#00000088" layoutX="20.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Administrateur" wrappingWidth="143.00000503659248">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fitHeight="98.0" fitWidth="163.0" layoutX="11.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#3e52b2" layoutX="11.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATABANK -" wrappingWidth="108.9999828338623">
+                     <font>
+                        <Font name="Lucida Sans Demibold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#05abf2fb" layoutX="108.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BUSNESS" wrappingWidth="68.41240119934082">
+                     <font>
+                        <Font name="Lucida Sans Demibold" size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <StackPane fx:id="content" layoutX="187.0" prefHeight="655.0" prefWidth="1021.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="187.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

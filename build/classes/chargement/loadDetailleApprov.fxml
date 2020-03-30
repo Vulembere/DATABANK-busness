@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="46.0" prefWidth="485.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="chargementControllers.LoadDetailleApprovController">
+   <children>
+      <Label fx:id="txtnumero" alignment="CENTER" contentDisplay="CENTER" layoutX="-11.0" layoutY="10.0" prefHeight="27.0" prefWidth="65.0" style="-fx-background-color: #48477B; -fx-background-radius: 10px; -fx-border-color: #03A9F4; -fx-border-radius: 10px; -fx-border-width: 0.25px;" text="002" textFill="#ffffffd8">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtDesignation" layoutX="58.0" layoutY="11.0" opacity="0.57" prefHeight="26.0" prefWidth="173.0" text="ESSENCE" textFill="#000000">
+         <font>
+            <Font name="Yu Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="239.0" layoutY="15.0" text="Qte :" textFill="#42526e">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="273.0" layoutY="8.0" prefHeight="30.0" prefWidth="55.0" style="-fx-border-color: #b6b6b6; -fx-border-width: 0.25px;">
+         <children>
+            <TextField fx:id="txtQuantite" alignment="CENTER" layoutX="2.0" layoutY="-3.0" prefHeight="28.0" prefWidth="55.0" promptText="10 pieces" style="-fx-background-color: #fff;" text="0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="336.0" layoutY="16.0" prefHeight="15.0" prefWidth="29.0" text="PA :" textFill="#42526e">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="368.0" layoutY="9.0" prefHeight="30.0" prefWidth="55.0" style="-fx-border-color: #b6b6b6; -fx-border-width: 0.25px;">
+         <children>
+            <TextField fx:id="txtPA" alignment="CENTER" layoutX="2.0" layoutY="-3.0" prefHeight="28.0" prefWidth="55.0" promptText="10 pieces" style="-fx-background-color: #fff;" text="0.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+         </children>
+      </AnchorPane>
+      <FontAwesomeIconView fx:id="btn_save" fill="#0c2cff" glyphName="CHECK" layoutX="431.0" layoutY="30.0" onMouseClicked="#save" size="20">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+      <FontAwesomeIconView fx:id="btn_delete" fill="#ff0d0d" glyphName="REMOVE" layoutX="459.0" layoutY="30.0" onMouseClicked="#delete" size="20">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+      <Separator layoutX="425.0" layoutY="10.0" orientation="VERTICAL" prefHeight="26.0" prefWidth="1.0" />
+      <Separator layoutX="453.0" layoutY="12.0" orientation="VERTICAL" prefHeight="26.0" prefWidth="1.0" />
+      <Separator layoutX="479.0" layoutY="12.0" orientation="VERTICAL" prefHeight="26.0" prefWidth="1.0" />
+      <Separator layoutX="14.0" layoutY="42.0" opacity="0.17" prefHeight="3.0" prefWidth="453.0" />
+   </children>
+</AnchorPane>

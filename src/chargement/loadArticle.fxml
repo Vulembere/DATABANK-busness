@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="69.0" prefWidth="739.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chargementControllers.LoadArticleController">
+   <children>
+      <Label fx:id="txtNom" layoutX="88.0" layoutY="14.0" opacity="0.57" prefHeight="26.0" prefWidth="590.0" text="ESSENCE" textFill="#000000">
+         <font>
+            <Font name="Yu Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtInfos" contentDisplay="CENTER" layoutX="90.0" layoutY="37.0" opacity="0.57" prefHeight="25.0" prefWidth="624.0" text="Simple" textFill="#000000c5">
+         <font>
+            <Font name="Yu Gothic UI Light" size="14.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fx:id="btn_afficher" fill="#48477a" glyphName="ELLIPSIS_H" layoutX="697.0" layoutY="34.0" onMouseClicked="#Afficher" size="20" styleClass="CursorChange" />
+      <Label fx:id="txtIndice" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="13.0" prefHeight="44.0" prefWidth="63.0" style="-fx-background-color: #48477B; -fx-background-radius: 5px; -fx-border-color: #03A9F4; -fx-border-radius: 5px; -fx-border-width: 0.25px;" text="MB" textFill="#ffffffd8">
+         <font>
+            <Font name="Arial" size="19.0" />
+         </font>
+      </Label>
+      <Separator layoutY="62.0" opacity="0.22" prefHeight="0.0" prefWidth="713.0" />
+   </children>
+</AnchorPane>

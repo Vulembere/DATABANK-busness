@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="655.0" prefWidth="776.0" style="-fx-background-color: #F1F4F9;" stylesheets="@../Style/Style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfacesControllers.ArticleController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="7.0" prefHeight="45.0" prefWidth="505.0" style="-fx-background-color: fff; -fx-background-radius: 5px;" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="7.0">
+         <children>
+            <Text fill="#00000086" layoutX="9.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre Total des Articles" wrappingWidth="103.99999575316906">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="436.0" layoutY="10.0" prefHeight="26.0" prefWidth="258.0" style="-fx-background-color: #fff; -fx-border-color: #BAC3E2; -fx-border-width: 0.25; -fx-border-radius: 7px; -fx-background-radius: 7px;" AnchorPane.rightAnchor="105.0">
+               <children>
+                  <TextField fx:id="txtRechercher" layoutX="5.0" layoutY="1.0" onKeyReleased="#rechercher" prefHeight="24.0" prefWidth="229.0" promptText="Rechercher un Produit" style="-fx-background-color: #FFF;">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </TextField>
+                  <OctIconView fill="#070707" glyphName="SEARCH" layoutX="238.0" layoutY="19.0" size="13" />
+               </children>
+               <effect>
+                  <DropShadow color="WHITE" />
+               </effect>
+            </AnchorPane>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="954.0" layoutY="9.0" onAction="#NouveauArticle" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #fff;" text=" " textFill="#48477b" AnchorPane.rightAnchor="14.0">
+               <font>
+                  <Font name="Century Gothic" size="9.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView glyphName="PLUS" size="15" />
+               </graphic>
+            </JFXButton>
+            <Text fx:id="txtNombre" fill="#6f6f6f" layoutX="134.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0002" wrappingWidth="70.0000069141388">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="460.0" layoutY="9.0" onAction="#refresh" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #fff;" text=" " textFill="#48477b" AnchorPane.rightAnchor="56.0">
+               <font>
+                  <Font name="Century Gothic" size="9.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView glyphName="UNDO" size="15" />
+               </graphic>
+            </JFXButton>
+         </children>
+         <effect>
+            <DropShadow color="#f2f2f2" />
+         </effect>
+      </AnchorPane>
+      <HBox alignment="CENTER" layoutY="67.0" prefHeight="584.0" prefWidth="571.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="67.0">
+         <children>
+            <ScrollPane prefHeight="584.0" prefWidth="782.0" style="-fx-background-color: #F1F4F9;" styleClass="othersscroll">
+               <content>
+                  <VBox fx:id="vbx" prefHeight="582.0" prefWidth="748.0" spacing="5.0" style="-fx-background-color: #F1F4F9;" />
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
